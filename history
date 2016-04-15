@@ -343,3 +343,8 @@
   339  git config --list
   340  git init
   341  history > history
+  342  git status
+  343  git add history
+  344  git commit -m 'this is supposed to add my history to my repository'
+  345  git status
+  346  history > history
