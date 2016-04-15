@@ -1,0 +1,345 @@
+    1  sudo su -
+    2  sudo poweroff
+    3  sudo su -
+    4  ssh compute1
+    5  cd
+    6  exit
+    7  ssh compute1
+    8  exit
+    9  ls
+   10  ansible -h
+   11  ansible -h | less
+   12  ls
+   13  vim hosts
+   14  ansible -i hosts -m ping
+   15  ansible all -i hosts -m ping
+   16  ansible all -i hosts -m setup
+   17  ansible all -i hosts -m setup | less
+   18  vim a
+   19  ansible all -i hosts -m copy -a 'src=~/a dest=~/b'
+   20  vim hosts 
+   21  ansible all -i hosts -m ping
+   22  vim hosts 
+   23  ansible all -i hosts -m ping
+   24  ping 192.168.0.14
+   25  vim hosts 
+   26  ping 192.168.0.14
+   27  ansible all -i hosts -m ping
+   28  ansible all -i hosts -m command -a 'hostname'
+   29  ansible controller -i hosts -m command -a 'hostname'
+   30  ansible openstack -i hosts -m command -a 'hostname'
+   31  ansible openstack -i hosts -m command -a 'whoami'
+   32  ansible compute1,compute2 -i hosts -m setup
+   33  ansible "compute1,compute2" -i hosts -m setup
+   34  cat hosts 
+   35  ansible compute1 -i hosts -m setup
+   36  ansible compute1 -i hosts -m ping
+   37  ansible compute1,compute2 -i hosts -m ping
+   38  ansible compute1, compute2 -i hosts -m ping
+   39  ansible compute1 compute2 -i hosts -m ping
+   40  ansible "compute1, compute2" -i hosts -m ping
+   41  ansible "[compute1, compute2]" -i hosts -m ping
+   42  ansible compute1 -i hosts -m setup | grep cores
+   43  ansible compute1 -i hosts -m setup | grep vcpus
+   44  ansible all -i hosts -m setup | grep vcpus
+   45   ls
+   46  vim sl.yml
+   47  ansible-playbook -i hosts sl.yml 
+   48  vim sl.yml
+   49  ansible-playbook -i hosts sl.yml 
+   50  vim sl.yml 
+   51  ansible-playbook -i hosts sl.yml 
+   52  vim sl.yml 
+   53  ansible-playbook -i hosts sl.yml 
+   54  vim sl.
+   55  vim sl.yml 
+   56  ansible-playbook -i hosts sl.yml 
+   57  vim sl.yml 
+   58  ansible-playbook -i hosts sl.yml 
+   59  vim sl.yml 
+   60  ansible-playbook -i hosts sl.yml 
+   61  vim sl.y
+   62  vim sl.yml 
+   63  ansible-playbook -i hosts sl.yml 
+   64  vim sl.yml 
+   65  ansible-playbook -i hosts sl.yml 
+   66  exit
+   67  ansible
+   68  sudo yum install ansible
+   69  sudo su
+   70  ansible | less
+   71  ssh neutron
+   72  ping neutron
+   73  ssh neutron
+   74  ls
+   75  cat sl.
+   76  cat sl.yml 
+   77  ls
+   78  rm a
+   79  rm hosts 
+   80  rm sl.retry 
+   81  ls
+   82  git clone https://github.com/bryfry/ansible-novnc.git
+   83  ls
+   84  cd ansible-novnc/
+   85  ls
+   86  git pull
+   87  ansible-playbook -i hosts novnc.yml 
+   88  cat /etc/nova/nova.c
+   89  cat /etc/nova/nova.conf
+   90  sudo cat /etc/nova/nova.conf
+   91  ssh compute1
+   92  sudo su
+   93  exit
+   94  ssh compute1
+   95  exit
+   96  ls
+   97  rm sl.yml 
+   98  rm ansible-novnc/
+   99  rm ansible-novnc/ 0rf
+  100  rm ansible-novnc/ -rf
+  101  exit
+  102  ip
+  103  ip addr
+  104  exit
+  105  exexit
+  106  ll
+  107  to
+  108  exit
+  109  # i started 
+  110  ls
+  111  sdf
+  112  dsf
+  113  lls
+  114  ll
+  115  exit
+  116  exti
+  117  exit
+  118  screen 
+  119  screen -ls
+  120  ll
+  121  cd ansible-novnc/
+  122  ll
+  123  clear
+  124  less novnc.yml 
+  125  exit
+  126  screen -x
+  127  screen
+  128  exit
+  129  sudo yum install ansible
+  130  #yay
+  131  ansible -h | less
+  132  pwd
+  133  vim hosts
+  134  cat hosts
+  135  ll
+  136  vim hosts
+  137  ll
+  138  cat hosts
+  139  ansible all -i hosts -m ping
+  140  ansible all -i hosts -m setup | less
+  141  vim hosts
+  142  rm .hosts.swp
+  143  vim hosts
+  144  cat hosts
+  145  vim hosts
+  146  cat hosts
+  147  ansible all -i hosts -m ping
+  148  ansible openstack -i hosts -m command -a 'hostname'
+  149  hostname
+  150  ansible openstack -i hosts -m command -a 'ipa'
+  151  ansible openstack -i hosts -m command -a 'ip a'
+  152  ip a
+  153  ansible openstack -i hosts -m command -a 'ip addr'
+  154  ip addr
+  155  ansible openstack -i hosts -m command -a 'ip addr'
+  156  ansible openstack -i hosts -m command -a 'ip addr show'
+  157  ansible openstack -i hosts -m command -a "ip addr show"
+  158  ansible openstack -i hosts -m command -a "ifconfig"
+  159  ansible openstack -i hosts -m command -a "ls"
+  160  ansible openstack -i hosts -m command -a "echo $HOME"
+  161  ansible openstack -i hosts -m command -a "ls"
+  162  ansible openstack -i hosts -m command -a "which ip"
+  163  which ip
+  164  ansible openstack -i hosts -m command -a "/usr/sbin/ip addr"
+  165  ansible openstack -i hosts -m command -a "echo $PATH"
+  166  ansible -h | grep sudo
+  167  ansible openstack -i hosts -m command -a "ip addr" -s
+  168  sudo su
+  169  ansible openstack -i hosts -m command -a "whoami"
+  170  ansible -h | grep user
+  171  ansible openstack -i hosts -m command -a "whoami" -u root
+  172  ansible openstack -i hosts -m command -a "ip addr" -u root
+  173  ansible openstack -i hosts -m command -a "ip addr" --sudo
+  174  ansible openstack -i hosts -m command -a "echo $PATH" --sudo
+  175  ansible openstack -i hosts -m command -a "echo $PATH"
+  176  ansible openstack -i hosts -m command -a "whoami"
+  177  ansible openstack -i hosts -m command -a "whoami" --sudo
+  178  ip addr
+  179  ansible openstack -i hosts -m command -a "ip addr"
+  180  ip addr
+  181  ansible openstack -i hosts -m command -a "ip addr"
+  182  ansible openstack -i hosts -m command -a "/usr/sbin/ip addr"
+  183  ansible openstack -i hosts -m command -a "echo $PATH"
+  184  ansible openstack -i hosts -m script -a "echo $PATH"
+  185  ansible openstack -i hosts -m shell -a "ip addr"
+  186  sh
+  187  ansible openstack -i hosts -m shell -a "echo $PATH"
+  188  ansible openstack -i hosts -m yum -a "update_cache=yes"
+  189  ansible openstack -i hosts -m yum -a "name=yum update_cache=yes"
+  190  ansible openstack -i hosts -m yum -a "name=yum state=installed"
+  191  yum install yum
+  192  ansible openstack -i hosts -m yum -a "name=htop state=installed"
+  193  ansible openstack -i hosts -m yum -a "name=sl state=installed"
+  194  ansible openstack -i hosts -m yum -a "name=htop state=absent" -s
+  195  ansible openstack -i hosts -m yum -a "name=htop state=install" -s
+  196  ansible openstack -i hosts -m yum -a "name=htop state=installed" -s
+  197  ansible controller -i hosts -m command -a 'whoami'
+  198  ansible openstack -i hosts -m command -a 'name=htop state=installed'
+  199  ansible openstack -i hosts -m yum -a 'name=htop state=installed'
+  200  ansible openstack -i hosts -m command -a 'name=htop state=installed'
+  201  ansible --help
+  202  less ansible -h
+  203  ansible -h | less
+  204  man ansible
+  205  ansible compute1 -i hosts -m setup | grep vcpus
+  206  ansible compute1 -i hosts -m setup
+  207  ansible compute1 -i hosts -m setup | less
+  208  ansible compute1 -i hosts -m setup | grep mtu
+  209  ansible compute1 -i hosts -m setup | grep mtu.*eth\d
+  210  ansible compute1 -i hosts -m setup | grep mtu.eth\d
+  211  ansible compute1 -i hosts -m setup | grep mtu.eth
+  212  ansible compute1 -i hosts -m setup | grep mtu.eth[0-9]
+  213  ansible compute2 -i hosts -m setup | grep vcpus
+  214  ll
+  215  ansible -h | less
+  216  cat hosts 
+  217  ansible openstack -i hosts -m setup | grep vcpus
+  218  wget alta3.com/labs/files/sl.yml
+  219  wget http://alta3.com/labs/files/sl.yml
+  220  wget https://alta3.com/labs/files/sl.yml
+  221  curl http://alta3.com/labs/files/sl.yml > sl.yml
+  222  ll
+  223  cat sl.yml 
+  224  curl http://alta3.com/labs/files/sl.yml
+  225  curl https://alta3.com/labs/files/sl.yml
+  226  curl https://alta3.com/labs/files/sl.yml > sl
+  227  cat sl
+  228  ansible-playbook -i hosts sl.yml
+  229  vim sl.yml 
+  230  ll
+  231  curl https://alta3.com/labs/files/sl.yml
+  232  curl https://alta3.com/labs/files/sl.yml > sl.yml
+  233  cat sl.yml
+  234  ansible-playbook -i hosts sl.yml
+  235  ansible-playbook -i hosts sl.yml 
+  236  sl
+  237  man sl
+  238  sl -a
+  239  sl -F
+  240  man sl
+  241  sl -c
+  242  sl
+  243  git clone https://github.com/bryfry/ansible-novnc.git
+  244  cd ansible-novnc
+  245  less novnc.yml 
+  246  less files/nova-controller.conf.j2
+  247  cat files/nova-controller.conf.j2 | grep vnc | less
+  248  clear
+  249  cat files/nova-controller.conf.j2 | grep vnc | less
+  250  grep files/nova-controller.conf.j2 vnc
+  251  grep vnc files/nova-controller.conf.j2 
+  252  clear
+  253  ansible-playbook -i hosts novnc.yml
+  254  screen -ls
+  255  exit
+  256  screen -x
+  257  screen -ls
+  258  screen -x
+  259  exit
+  260  ls
+  261  rm ansible-novnc/
+  262  vim sl.yml 
+  263  ansible-playbook -i hosts sl.yml 
+  264  vim sl.yml 
+  265  ansible-playbook -i hosts sl.yml 
+  266  ls
+  267  rm -r ansible-novnc/
+  268  rm -r ansible-novnc/ -f
+  269  rm hosts 
+  270  rm sl
+  271  rm sl.yml 
+  272  :w
+  273  exit
+  274  cd
+  275  sudo yum install ansible
+  276  ansible -h |less
+  277  vim hosts
+  278  ansible all -i hosts -m ping
+  279  ansible all -i hosts -m setup |less
+  280  vim hosts
+  281  vi hosts
+  282  cat hosts
+  283  ansible all -i hosts -m ping
+  284  ansible openstack -i hosts -m command -a 'hostname'
+  285  ansible openstack -i hosts -m command -a 'whoami'
+  286  ansible openstack -i hosts -m command -a '/usr/sbin/ip addr'
+  287  ansible compute1 -i hosts -m setup |grep vcpus
+  288  ansible compute2 -i hosts -m setup |grep vcpus
+  289  curl https://alta3.com/labs/files/sl.yml
+  290  curl https://alta3.com/labs/files/sl.yml > sl.yml
+  291  less sl.yml
+  292  ansible-playbook -i hosts sl.yml
+  293  ls sl
+  294  sl
+  295  mann sl
+  296  man sl
+  297  get clone https://github.com/bryfry/ansible-novnc.dit
+  298  git clone https://github.com/bryfry/ansible-novnc.git
+  299  cd ansible-novnc
+  300  less novnc.yml
+  301  less files/nova-controller.conf.j2
+  302  less files/nova-compute.conf.j2
+  303  grep vnc file/nova-controller.conf.j2
+  304  grep vnc files/nova-controller.conf.j2
+  305  nasible-playbook -i hosts novnc.yml
+  306  asible-playbook -i hosts novnc.yml
+  307  ansible-playbook -i hosts novnc.yml
+  308  eixt
+  309  ]exit
+  310  exit
+  311  pwd
+  312  cd
+  313  pwd
+  314  sudo yum install ansible
+  315  ansible -h |less
+  316  vi hosts
+  317  mv hosts oldhosts
+  318  vi hosts
+  319  cp oldhosts hosts
+  320  vi hosts
+  321  cat hosts
+  322  ansible all -i hosts -m ping
+  323  ansible all -i hosts -m setup |less
+  324  cat oldhosts
+  325  mv oldhosts hosts
+  326  vi hosts
+  327  cat hosts
+  328  ansible all -i hosts -m ping
+  329  ansible openstack -i hosts -m command -a 'hostnane'
+  330  ansible openstack -i hosts -m command -a 'whoami'
+  331  ansible openstack -i hosts -m command -a '/usr/sbin ip addr'
+  332  ansible openstack -i hosts -m yum -a '
+
+
+
+'
+  333  mkdir ~/myopenstack
+  334  cd myopenstack
+  335  yum install git
+  336  git config --global user.name "robingwilson"
+  337  git config --glboal user.name "robinw@rawilson.net"
+  338  git config --global user.name "robinw@rawilson.net"
+  339  git config --list
+  340  git init
+  341  history > history
